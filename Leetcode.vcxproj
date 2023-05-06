@@ -132,6 +132,8 @@
   <ItemGroup>
     <ClInclude Include="139.h" />
     <ClInclude Include="198.h" />
+    <ClInclude Include="300.h" />
+    <ClInclude Include="322.h" />
     <ClInclude Include="70.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

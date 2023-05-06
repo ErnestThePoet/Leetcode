@@ -29,5 +29,11 @@
     <ClInclude Include="139.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="322.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="300.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

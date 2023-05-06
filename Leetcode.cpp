@@ -1,5 +1,5 @@
 #include <iostream>
-#include "139.h"
+#include "300.h"
 
 using std::cin;
 using std::cout;
@@ -8,10 +8,10 @@ using std::endl;
 int main()
 {
     Solution solution;
-    vector<string> words = { "cats", "dog", "sand", "and", "cat" };
 
-    cout << solution.wordBreak("sandanddogandcat",words) << endl;
-    cout << solution.wordBreak("v1", words) << endl;
+    vector<int> c = { 10,9,2,5,3,7,101,18 };
+
+    cout << solution.lengthOfLIS(c) << endl;
 
     return 0;
 }
