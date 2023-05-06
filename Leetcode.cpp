@@ -1,5 +1,5 @@
 #include <iostream>
-#include "300.h"
+#include "64.h"
 
 using std::cin;
 using std::cout;
@@ -9,9 +9,9 @@ int main()
 {
     Solution solution;
 
-    vector<int> c = { 10,9,2,5,3,7,101,18 };
+    vector<vector<int>> c = { {1,3,1},{1,5,1},{4,2,1} };
 
-    cout << solution.lengthOfLIS(c) << endl;
+    cout << solution.minPathSum(c) << endl;
 
     return 0;
 }

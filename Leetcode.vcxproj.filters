@@ -35,5 +35,11 @@
     <ClInclude Include="300.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="120.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="64.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
