@@ -18,6 +18,9 @@
     <ClCompile Include="Leetcode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="121.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="70.h">
@@ -39,6 +42,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="64.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="200.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

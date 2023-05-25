@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="121.cpp" />
     <ClCompile Include="Leetcode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="120.h" />
     <ClInclude Include="139.h" />
     <ClInclude Include="198.h" />
+    <ClInclude Include="200.h" />
     <ClInclude Include="300.h" />
     <ClInclude Include="322.h" />
     <ClInclude Include="64.h" />

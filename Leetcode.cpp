@@ -1,5 +1,5 @@
 #include <iostream>
-#include "64.h"
+#include "200.h"
 
 using std::cin;
 using std::cout;
@@ -9,9 +9,14 @@ int main()
 {
     Solution solution;
 
-    vector<vector<int>> c = { {1,3,1},{1,5,1},{4,2,1} };
+    vector<vector<char>> c = { 
+        {'1','1','0','0','0'} ,
+        {'1','1','0','0','0'},
+        {'0','0','1','0','0'},
+        {'0','0','0','1','1'}
+    };
 
-    cout << solution.minPathSum(c) << endl;
+	cout << solution.numIslands(c) << endl;
 
     return 0;
 }
