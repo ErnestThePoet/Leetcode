@@ -16,6 +16,7 @@ public:
             num_set.insert(num);
         }
 
+        // In case for []
         int longestStreak = 0;
 
         for (int num : nums)
