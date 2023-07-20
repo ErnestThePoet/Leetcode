@@ -11,7 +11,7 @@ public:
         const int width = obstacleGrid[0].size();
         const int height = obstacleGrid.size();
         
-        vector<vector<int>> dp(height, vector<int>(width,0));
+        vector<vector<uint64_t>> dp(height, vector<uint64_t>(width,0));
 
         bool isObstacleEncountered = false;
         for (int i = height - 1; i >= 0; i--)
