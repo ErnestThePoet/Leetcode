@@ -1,5 +1,5 @@
 #include <iostream>
-#include "200.h"
+#include "128.h"
 
 using std::cin;
 using std::cout;
@@ -9,14 +9,9 @@ int main()
 {
     Solution solution;
 
-    vector<vector<char>> c = { 
-        {'1','1','0','0','0'} ,
-        {'1','1','0','0','0'},
-        {'0','0','1','0','0'},
-        {'0','0','0','1','1'}
-    };
+    vector<int> c = { 100,4,200,1,3,2 };
 
-	cout << solution.numIslands(c) << endl;
+	cout << solution.longestConsecutive(c) << endl;
 
     return 0;
 }
