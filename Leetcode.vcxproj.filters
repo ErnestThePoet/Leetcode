@@ -80,5 +80,17 @@
     <ClInclude Include="3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="49.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="150.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="92.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="82.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

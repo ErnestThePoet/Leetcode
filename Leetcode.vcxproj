@@ -146,10 +146,14 @@
     <ClInclude Include="3.h" />
     <ClInclude Include="300.h" />
     <ClInclude Include="322.h" />
+    <ClInclude Include="150.h" />
+    <ClInclude Include="49.h" />
     <ClInclude Include="63.h" />
     <ClInclude Include="64.h" />
     <ClInclude Include="70.h" />
     <ClInclude Include="80.h" />
+    <ClInclude Include="82.h" />
+    <ClInclude Include="92.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
