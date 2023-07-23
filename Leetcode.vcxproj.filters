@@ -92,5 +92,8 @@
     <ClInclude Include="82.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="130.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

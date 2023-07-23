@@ -134,6 +134,7 @@
     <ClInclude Include="120.h" />
     <ClInclude Include="125.h" />
     <ClInclude Include="128.h" />
+    <ClInclude Include="130.h" />
     <ClInclude Include="139.h" />
     <ClInclude Include="14.h" />
     <ClInclude Include="15.h" />
