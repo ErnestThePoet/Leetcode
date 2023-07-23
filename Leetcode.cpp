@@ -1,5 +1,5 @@
 #include <iostream>
-#include "20.h"
+#include "209.h"
 
 using std::cin;
 using std::cout;
@@ -9,7 +9,9 @@ int main()
 {
     Solution solution;
 
-	cout << solution.isValid("(]") << endl;
+    vector<int> s{8};
+
+    cout<<solution.minSubArrayLen(7,s);
 
     return 0;
 }

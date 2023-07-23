@@ -132,14 +132,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="120.h" />
+    <ClInclude Include="125.h" />
     <ClInclude Include="128.h" />
     <ClInclude Include="139.h" />
     <ClInclude Include="14.h" />
+    <ClInclude Include="15.h" />
     <ClInclude Include="151.h" />
     <ClInclude Include="198.h" />
     <ClInclude Include="20.h" />
     <ClInclude Include="200.h" />
     <ClInclude Include="207.h" />
+    <ClInclude Include="209.h" />
+    <ClInclude Include="3.h" />
     <ClInclude Include="300.h" />
     <ClInclude Include="322.h" />
     <ClInclude Include="63.h" />
