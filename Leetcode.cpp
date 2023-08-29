@@ -1,5 +1,5 @@
 #include <iostream>
-#include "88.h"
+#include "189.h"
 
 using std::cin;
 using std::cout;
@@ -9,15 +9,21 @@ int main()
 {
     Solution solution;
 
-    vector<int> a{1, 2, 3, 5, 7,0,0,0,0,0,0,0};
-    vector<int> b{1, 1,2,2, 3, 4,7};
+    vector<int> a{1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-    solution.merge(a, 5, b, 7);
-
-    for (auto i : a)
+    for (int i = 0; i < 15; i++)
     {
-        cout << i << endl;
+        vector<int> b = a;
+        solution.rotate(b, i);
+
+        for (auto i : b)
+        {
+            cout << i << ' ';
+        }
+
+        cout << '\n';
     }
+
 
     return 0;
 }
