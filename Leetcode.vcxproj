@@ -154,6 +154,7 @@
     <ClInclude Include="70.h" />
     <ClInclude Include="80.h" />
     <ClInclude Include="82.h" />
+    <ClInclude Include="88.h" />
     <ClInclude Include="92.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
