@@ -104,5 +104,17 @@
     <ClInclude Include="74.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="56.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="57.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="167.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
