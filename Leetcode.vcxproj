@@ -137,6 +137,7 @@
     <ClInclude Include="125.h" />
     <ClInclude Include="128.h" />
     <ClInclude Include="130.h" />
+    <ClInclude Include="1143.h" />
     <ClInclude Include="139.h" />
     <ClInclude Include="14.h" />
     <ClInclude Include="15.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="200.h" />
     <ClInclude Include="207.h" />
     <ClInclude Include="209.h" />
+    <ClInclude Include="238.h" />
     <ClInclude Include="274.h" />
     <ClInclude Include="3.h" />
     <ClInclude Include="300.h" />

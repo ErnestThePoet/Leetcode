@@ -140,5 +140,11 @@
     <ClInclude Include="380.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="238.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="1143.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
