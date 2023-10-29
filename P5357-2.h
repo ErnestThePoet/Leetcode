@@ -21,16 +21,16 @@ constexpr size_t kCharSetSize = 26;
 
 #define GET_CHAR_INDEX(C) (C-'a')
 
-struct TrieMapNode2
+struct TrieMapNode
 {
 	vector<int> terminated_pattern_indexes;
-	array<shared_ptr<TrieMapNode2>, kCharSetSize> sons;
-	shared_ptr<TrieMapNode2> fail;
+	array<shared_ptr<TrieMapNode>, kCharSetSize> sons;
+	shared_ptr<TrieMapNode> fail;
 };
 
-shared_ptr<TrieMapNode2> BuildTrieTree2(const vector<string>& patterns)
+shared_ptr<TrieMapNode> BuildTrieTree(const vector<string>& patterns)
 {
-	shared_ptr<TrieMapNode2> root = make_shared<TrieMapNode2>();
+	shared_ptr<TrieMapNode> root = make_shared<TrieMapNode>();
 
 	for (int i = 0; i < patterns.size(); i++)
 	{
@@ -39,7 +39,7 @@ shared_ptr<TrieMapNode2> BuildTrieTree2(const vector<string>& patterns)
 		{
 			if (!cur->sons[GET_CHAR_INDEX(patterns[i][j])])
 			{
-				cur->sons[GET_CHAR_INDEX(patterns[i][j])] = make_shared<TrieMapNode2>();
+				cur->sons[GET_CHAR_INDEX(patterns[i][j])] = make_shared<TrieMapNode>();
 			}
 
 			if (j == patterns[i].size() - 1)
@@ -54,9 +54,9 @@ shared_ptr<TrieMapNode2> BuildTrieTree2(const vector<string>& patterns)
 	return root;
 }
 
-void BuildFail2(shared_ptr<TrieMapNode2>& root)
+void BuildFail(shared_ptr<TrieMapNode>& root)
 {
-	queue<shared_ptr<TrieMapNode2>> q;
+	queue<shared_ptr<TrieMapNode>> q;
 
 	root->fail = root;
 
@@ -93,7 +93,7 @@ void BuildFail2(shared_ptr<TrieMapNode2>& root)
 	}
 }
 
-void P5357_2()
+void P5357()
 {
 	int n;
 	cin >> n;
@@ -109,13 +109,13 @@ void P5357_2()
 
 	vector<int> counts(n);
 
-	auto root = BuildTrieTree2(patterns);
+	auto root = BuildTrieTree(patterns);
 	if (!root)
 	{
 		return;
 	}
 
-	BuildFail2(root);
+	BuildFail(root);
 
 	auto cur_base = root;
 	for (int i = 0; i < m.size(); i++)

@@ -1,14 +1,13 @@
 #include <iostream>
+#include "P5357-3.h"
 
 using std::cin;
 using std::cout;
 using std::endl;
 
-void P5357_3();
-
 int main()
 {
-    P5357_3();
+    P5357();
 
     return 0;
 }

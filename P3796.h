@@ -40,7 +40,7 @@ vector<TrieMapNode3> BuildTrieTree3(const vector<string>& patterns)
 		int cur = kRootIndex;
 		for (int j = 0; j < patterns[i].size(); j++)
 		{
-			if (tree[cur].sons[GET_CHAR_INDEX(patterns[i][j])]== kRootIndex)
+			if (tree[cur].sons[GET_CHAR_INDEX(patterns[i][j])] == kRootIndex)
 			{
 				tree[cur].sons[GET_CHAR_INDEX(patterns[i][j])] = tree.size();
 				tree.emplace_back();
@@ -64,7 +64,7 @@ void BuildFail3(vector<TrieMapNode3>& tree)
 
 	for (int i = 0; i < kCharSetSize; i++)
 	{
-		if (tree[kRootIndex].sons[i]!= kRootIndex)
+		if (tree[kRootIndex].sons[i] != kRootIndex)
 		{
 			tree[tree[kRootIndex].sons[i]].fail = kRootIndex;
 			q.push(tree[kRootIndex].sons[i]);
@@ -78,7 +78,7 @@ void BuildFail3(vector<TrieMapNode3>& tree)
 
 		for (int i = 0; i < kCharSetSize; i++)
 		{
-			if (tree[cur].sons[i]!=kRootIndex)
+			if (tree[cur].sons[i] != kRootIndex)
 			{
 				tree[tree[cur].sons[i]].fail = tree[tree[cur].fail].sons[i];
 				q.push(tree[cur].sons[i]);
@@ -91,47 +91,50 @@ void BuildFail3(vector<TrieMapNode3>& tree)
 	}
 }
 
-void P5357_3()
+void P3796()
 {
-	int n;
-	cin >> n;
-	vector<string> patterns(n);
-	string m;
-
-	for (int i = 0; i < n; i++)
+	while (true)
 	{
-		cin >> patterns[i];
-	}
+		int n;
+		cin >> n;
+		vector<string> patterns(n);
+		string m;
 
-	cin >> m;
-
-	vector<int> counts(n);
-
-	auto tree = BuildTrieTree3(patterns);
-
-	BuildFail3(tree);
-
-	int cur_base = kRootIndex;
-	for (int i = 0; i < m.size(); i++)
-	{
-		int cur = tree[cur_base].sons[GET_CHAR_INDEX(m[i])];
-		while (cur != kRootIndex)
+		for (int i = 0; i < n; i++)
 		{
-			if (tree[cur].terminated_pattern_indexes.size())
-			{
-				for (int terminated_pattern_index : tree[cur].terminated_pattern_indexes)
-				{
-					counts[terminated_pattern_index]++;
-				}
-			}
-			cur = tree[cur].fail;
+			cin >> patterns[i];
 		}
 
-		cur_base = tree[cur_base].sons[GET_CHAR_INDEX(m[i])];
-	}
+		cin >> m;
 
-	for (int count : counts)
-	{
-		cout << count << endl;
+		vector<int> counts(n);
+
+		auto tree = BuildTrieTree3(patterns);
+
+		BuildFail3(tree);
+
+		int cur_base = kRootIndex;
+		for (int i = 0; i < m.size(); i++)
+		{
+			int cur = tree[cur_base].sons[GET_CHAR_INDEX(m[i])];
+			while (cur != kRootIndex)
+			{
+				if (tree[cur].terminated_pattern_indexes.size())
+				{
+					for (int terminated_pattern_index : tree[cur].terminated_pattern_indexes)
+					{
+						counts[terminated_pattern_index]++;
+					}
+				}
+				cur = tree[cur].fail;
+			}
+
+			cur_base = tree[cur_base].sons[GET_CHAR_INDEX(m[i])];
+		}
+
+		for (int count : counts)
+		{
+			cout << count << endl;
+		}
 	}
 }

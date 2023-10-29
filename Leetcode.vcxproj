@@ -127,15 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="121.cpp" />
     <ClCompile Include="Leetcode.cpp" />
-    <ClCompile Include="P5357-2.cpp" />
-    <ClCompile Include="P5357-3.cpp" />
-    <ClCompile Include="P5357.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="11.h" />
     <ClInclude Include="120.h" />
+    <ClInclude Include="121.h" />
     <ClInclude Include="122.h" />
     <ClInclude Include="125.h" />
     <ClInclude Include="128.h" />
@@ -175,6 +172,10 @@
     <ClInclude Include="82.h" />
     <ClInclude Include="88.h" />
     <ClInclude Include="92.h" />
+    <ClInclude Include="P3796.h" />
+    <ClInclude Include="P5357-2.h" />
+    <ClInclude Include="P5357-3.h" />
+    <ClInclude Include="P5357.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
