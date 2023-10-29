@@ -1,3 +1,5 @@
+#pragma once
+
 // This version elimishes MLE
 
 #include <iostream>
