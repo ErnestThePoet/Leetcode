@@ -1,10 +1,9 @@
-// This version elimishes some TLE
-
 #include <iostream>
 #include <string>
 #include <array>
 #include <vector>
 #include <queue>
+#include <algorithm>
 
 using std::array;
 using std::vector;
@@ -19,21 +18,21 @@ constexpr int kRootIndex = 0;
 
 #define GET_CHAR_INDEX(C) (C-'a')
 
-struct TrieMapNode3
+struct TrieMapNode
 {
 	vector<int> terminated_pattern_indexes;
 	array<int, kCharSetSize> sons;
 	int fail;
 
-	TrieMapNode3() :fail(kRootIndex)
+	TrieMapNode() :fail(kRootIndex)
 	{
 		sons.fill(kRootIndex);
 	}
 };
 
-vector<TrieMapNode3> BuildTrieTree3(const vector<string>& patterns)
+vector<TrieMapNode> BuildTrieTree(const vector<string>& patterns)
 {
-	vector<TrieMapNode3> tree(1);
+	vector<TrieMapNode> tree(1);
 
 	for (int i = 0; i < patterns.size(); i++)
 	{
@@ -58,7 +57,7 @@ vector<TrieMapNode3> BuildTrieTree3(const vector<string>& patterns)
 	return tree;
 }
 
-void BuildFail3(vector<TrieMapNode3>& tree)
+void BuildFail(vector<TrieMapNode>& tree)
 {
 	queue<int> q;
 
@@ -97,6 +96,12 @@ void P3796()
 	{
 		int n;
 		cin >> n;
+
+		if (n == 0)
+		{
+			break;
+		}
+
 		vector<string> patterns(n);
 		string m;
 
@@ -109,9 +114,9 @@ void P3796()
 
 		vector<int> counts(n);
 
-		auto tree = BuildTrieTree3(patterns);
+		auto tree = BuildTrieTree(patterns);
 
-		BuildFail3(tree);
+		BuildFail(tree);
 
 		int cur_base = kRootIndex;
 		for (int i = 0; i < m.size(); i++)
@@ -132,9 +137,14 @@ void P3796()
 			cur_base = tree[cur_base].sons[GET_CHAR_INDEX(m[i])];
 		}
 
-		for (int count : counts)
+		int max_count = *std::max_element(counts.cbegin(), counts.cend());
+		cout << max_count << endl;
+		for (int i = 0; i < counts.size(); i++)
 		{
-			cout << count << endl;
+			if (counts[i] == max_count)
+			{
+				cout << patterns[i] << endl;
+			}
 		}
 	}
 }

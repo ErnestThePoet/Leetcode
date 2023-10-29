@@ -1,5 +1,5 @@
 #include <iostream>
-#include "P5357-3.h"
+#include "P3796.h"
 
 using std::cin;
 using std::cout;
@@ -7,7 +7,7 @@ using std::endl;
 
 int main()
 {
-    P5357();
+    P3796();
 
     return 0;
 }
