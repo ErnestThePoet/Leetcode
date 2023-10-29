@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="121.cpp" />
     <ClCompile Include="Leetcode.cpp" />
+    <ClCompile Include="P5357-2.cpp" />
+    <ClCompile Include="P5357-3.cpp" />
+    <ClCompile Include="P5357.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="11.h" />

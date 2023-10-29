@@ -1,22 +1,14 @@
 #include <iostream>
-#include "56.h"
 
 using std::cin;
 using std::cout;
 using std::endl;
 
+void P5357_3();
+
 int main()
 {
-    Solution solution;
-
-    vector<vector<int>> v{
-        {1, 2},
-        { 2,2 },
-        { 5,2 },
-        { 3,2 },
-    };
-
-    solution.merge(v);
+    P5357_3();
 
     return 0;
 }

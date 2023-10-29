@@ -21,6 +21,15 @@
     <ClCompile Include="121.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="P5357.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P5357-2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P5357-3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="70.h">
