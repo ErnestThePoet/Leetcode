@@ -72,10 +72,9 @@ public:
 		return base_[index];
 	}
 
-	// Never use the OnDemandVector instance after calling this
-	vector<T> ReturnVector()
+	size_t size() const
 	{
-		return std::move(base_);
+		return base_.size();
 	}
 };
 
@@ -109,18 +108,16 @@ void InitCharSetAndCharCodeSet()
 	}
 }
 
-inline bool HasTransition(const vector<int>& base,
-	const vector<CheckNode>& check,
+inline bool HasTransition(OnDemandVector<int>& base,
+	OnDemandVector<CheckNode>& check,
 	const int parent_state,
 	const int new_state)
 {
-	return new_state < base.size() &&
-		new_state < check.size() &&
-		base[new_state] != kFreeBase &&
+	return base[new_state] != kFreeBase &&
 		check[new_state].parent_state == parent_state;
 }
 
-pair<vector<int>, vector<CheckNode>> BuildDoubleArray(const vector<string>& patterns)
+pair<OnDemandVector<int>, OnDemandVector<CheckNode>> BuildDoubleArray(const vector<string>& patterns)
 {
 	const int kInitialSize = patterns.size() * 20;
 
@@ -228,10 +225,10 @@ pair<vector<int>, vector<CheckNode>> BuildDoubleArray(const vector<string>& patt
 		}
 	}
 
-	return { base.ReturnVector(),check.ReturnVector() };
+	return { std::move(base),std::move(check) };
 }
 
-void BuildFail(const vector<int>& base, vector<CheckNode>& check)
+void BuildFail(OnDemandVector<int>& base, OnDemandVector<CheckNode>& check)
 {
 	queue<int> q;
 
