@@ -176,6 +176,7 @@
     <ClInclude Include="P3808.h" />
     <ClInclude Include="P5357-2.h" />
     <ClInclude Include="P5357-3.h" />
+    <ClInclude Include="P5357-DA.h" />
     <ClInclude Include="P5357.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

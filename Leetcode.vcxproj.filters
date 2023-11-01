@@ -158,5 +158,11 @@
     <ClInclude Include="P5357.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="P3808.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P5357-DA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
